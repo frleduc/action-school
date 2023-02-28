@@ -1,11 +1,9 @@
-name: my reusable workflow
+name: Reusable Workflow
 on: 
   workflow_dispatch:
 
 jobs:
   run-npm-test:
-    runs-on: ubuntu-latest
-    uses: frleduc/my-react-app/.github/workflows/myreusableworkflow.yaml@feature/env-use
+    uses: ./.github/workflows/myreusableworkflow.yaml@feature/env-use
     with:
-      mynodeversion: 16
-
+      node-version: 14

@@ -1,22 +1,23 @@
-name: myreusable workflow
- 
+name: npm test
 on:
   workflow_call:
     inputs:
-      mynodeversion:
+      node-version:
         required: false
         default: 'lts/*'
         type: string
+
 jobs:
   run-npm-test:
+    runs-on: ubuntu-latest
     steps:
-        - name: checkout repo
+        - name: checkout
           uses: actions/checkout@v3
-        - name : install node
+        - name : setup node
           uses: actions/setup-node@v3
           with:
-            node-version: ${{inputs.mynodeversion}}
-        - name: run install + test
+            node-version: ${{ inputs.node-version }}
+        - name: run test
           shell: bash
           run: |
             node -v
