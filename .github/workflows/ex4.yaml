@@ -5,7 +5,7 @@ on:
 jobs:
   run-npm-test:
     runs-on: ubuntu-latest
-    uses: .github/workflows/myreusableworkflow@feature/env-use 
+    uses: .github/workflows/myreusableworkflow
     with:
       mynodeversion: '16'
 
