@@ -1,0 +1,9 @@
+name: My Reusable Workflow
+on: 
+  workflow_dispatch:
+
+jobs:
+  run-npm-test:
+    uses: ./.github/workflows/myreusableworkflow.yaml
+    with:
+      node-version: 14
