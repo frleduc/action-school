@@ -1,4 +1,4 @@
-name: interact with Github API
+name: Github API
 on: 
   pull_request:
 
