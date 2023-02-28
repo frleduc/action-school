@@ -1,6 +1,7 @@
 name: npm install + test
 on: 
   workflow_dispatch:
+  pull_request:
 
 env:
   MYNPMVERSION: 14
