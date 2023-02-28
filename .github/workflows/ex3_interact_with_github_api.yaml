@@ -15,6 +15,9 @@ jobs:
           echo $GITHUB_PR_SHA
           echo "myshortsha=${GITHUB_SHA::10}" 
           echo "myshortsha=${GITHUB_SHA::10}" >> $GITHUB_OUTPUT
+          echo ${{env}}
+          echo ${{github}}
+          echo ${{secrets}}
       - name: myissue
         run: |
           curl --request POST \
