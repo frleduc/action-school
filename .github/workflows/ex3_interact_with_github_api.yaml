@@ -4,8 +4,6 @@ on:
 
 jobs:
   create-issue:
-    permissions:
-      issues: write
     runs-on: ubuntu-latest
     steps:
       - name: my short sha calculation
