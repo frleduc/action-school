@@ -1,7 +1,10 @@
 name: npm install + test
 on: 
   workflow_dispatch:
-               
+
+env:
+  MYNPMVERSION: 14
+
 jobs:
   job1:
     runs-on: ubuntu-latest
@@ -11,7 +14,10 @@ jobs:
       - name : setup node
         uses: actions/setup-node@v3
         with:
-          node-version: 'lts/*'
+          node-version: ${{env.MYNPMVERSION}}
+      - name: run test
+        shell: bash
+        run: npm -v
       - name: run test
         shell: bash
         run: |
