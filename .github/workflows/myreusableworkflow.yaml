@@ -6,7 +6,6 @@ on:
         required: false
         default: 'lts/*'
         type: string
-
 jobs:
   run-npm-test:
     runs-on: ubuntu-latest
