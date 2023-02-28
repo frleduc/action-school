@@ -4,6 +4,6 @@ on:
 
 jobs:
   run-npm-test:
-    uses: ./.github/workflows/myreusableworkflow.yaml@feature/env-use
+    uses: ./.github/workflows/myreusableworkflow.yaml
     with:
       node-version: 14
